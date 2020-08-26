@@ -1,0 +1,255 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>登录</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="__INDEX__/img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/bootstrap.min.css">
+    <!-- font awesome CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/owl.carousel.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.theme.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.transitions.css">
+    <!-- meanmenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/animate.css">
+    <!-- summernote CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/summernote/summernote.css">
+    <!-- Range Slider CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/themesaller-forms.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/normalize.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Notika icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/notika-custom-icon.css">
+    <!-- bootstrap select CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/bootstrap-select/bootstrap-select.css">
+    <!-- datapicker CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/datapicker/datepicker3.css">
+    <!-- Color Picker CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/color-picker/farbtastic.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/chosen/chosen.css">
+    <!-- notification CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/notification/notification.css">
+    <!-- dropzone CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/dropzone/dropzone.css">
+    <!-- wave CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/wave/waves.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/main.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="__INDEX__/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Login Register area Start-->
+<div class="login-content">
+    <!-- Register -->
+    <div class="nk-block toggled">
+        <h1 style="color: white">注&nbsp;册</h1>
+        <form method="post" action="">
+            <div class="nk-form">
+                <div class="input-group">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
+                    <div class="nk-int-st">
+                        <input type="text" class="form-control" placeholder="用户名" name="name" required>
+                    </div>
+                </div>
+
+                <div class="input-group mg-t-15">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
+                    <div class="nk-int-st">
+                        <input type="password" class="form-control" name="password" placeholder="密码" required>
+                    </div>
+                </div>
+
+                <div class="input-group mg-t-15">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-phone"></i></span>
+                    <div class="nk-int-st">
+                        <input type="text" class="form-control" placeholder="电话号码" name="tele" required>
+                    </div>
+                </div>
+
+                <div class="input-group mg-t-15">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-map"></i></span>
+                    <div class="nk-int-st">
+                        <div class="chosen-select-act fm-cmp-mg">
+                            <select class="chosen" name="locate_id" style="display: none;">
+                                <option value="0">请选择所在地区</option>
+                                {volist name="locates" id="locate"}
+                                <option value="{$locate.id}">{$locate.name}</option>
+                                {/volist}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group mg-t-15">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-house"></i></span>
+                    <div class="nk-int-st">
+                        <input type="text" class="form-control" placeholder="详细地址" name="locate" required>
+                    </div>
+                </div>
+
+                <div class="input-group mg-t-15">
+                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-star"></i></span>
+                    <div class="nk-int-st">
+                        <input type="text" class="form-control" placeholder="身份证件号" name="shenfen" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-login btn-success btn-float"><i
+                        class="notika-icon notika-right-arrow"></i></button>
+            </div>
+        </form>
+
+        <div class="nk-navigation rg-ic-stl">
+            <a href="{:url('user/login')}"><i class="notika-icon notika-right-arrow"></i></a>
+        </div>
+    </div>
+
+</div>
+<!-- Login Register area End-->
+<!-- jquery
+    ============================================ -->
+<script src="__INDEX__/js/vendor/jquery-1.12.4.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="__INDEX__/js/bootstrap.min.js"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="__INDEX__/js/wow.min.js"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery-price-slider.js"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="__INDEX__/js/owl.carousel.min.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery.scrollUp.min.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="__INDEX__/js/meanmenu/jquery.meanmenu.js"></script>
+<!-- counterup JS
+    ============================================ -->
+<script src="__INDEX__/js/counterup/jquery.counterup.min.js"></script>
+<script src="__INDEX__/js/counterup/waypoints.min.js"></script>
+<script src="__INDEX__/js/counterup/counterup-active.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="__INDEX__/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- sparkline JS
+    ============================================ -->
+<script src="__INDEX__/js/sparkline/jquery.sparkline.min.js"></script>
+<script src="__INDEX__/js/sparkline/sparkline-active.js"></script>
+<!-- flot JS
+    ============================================ -->
+<script src="__INDEX__/js/flot/jquery.flot.js"></script>
+<script src="__INDEX__/js/flot/jquery.flot.resize.js"></script>
+<script src="__INDEX__/js/flot/flot-active.js"></script>
+<!-- knob JS
+    ============================================ -->
+<script src="__INDEX__/js/knob/jquery.knob.js"></script>
+<script src="__INDEX__/js/knob/jquery.appear.js"></script>
+<script src="__INDEX__/js/knob/knob-active.js"></script>
+<!-- Input Mask JS
+    ============================================ -->
+<script src="__INDEX__/js/jasny-bootstrap.min.js"></script>
+<!-- icheck JS
+    ============================================ -->
+<script src="__INDEX__/js/icheck/icheck.min.js"></script>
+<script src="__INDEX__/js/icheck/icheck-active.js"></script>
+<!-- rangle-slider JS
+    ============================================ -->
+<script src="__INDEX__/js/rangle-slider/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="__INDEX__/js/rangle-slider/jquery-ui-touch-punch.min.js"></script>
+<script src="__INDEX__/js/rangle-slider/rangle-active.js"></script>
+<!-- datapicker JS
+    ============================================ -->
+<script src="__INDEX__/js/datapicker/bootstrap-datepicker.js"></script>
+<script src="__INDEX__/js/datapicker/datepicker-active.js"></script>
+<!-- bootstrap select JS
+    ============================================ -->
+<script src="__INDEX__/js/bootstrap-select/bootstrap-select.js"></script>
+<!--  color-picker JS
+    ============================================ -->
+<script src="__INDEX__/js/color-picker/farbtastic.min.js"></script>
+<script src="__INDEX__/js/color-picker/color-picker.js"></script>
+<!--  notification JS
+    ============================================ -->
+<script src="__INDEX__/js/notification/bootstrap-growl.min.js"></script>
+<script src="__INDEX__/js/notification/notification-active.js"></script>
+<!--  summernote JS
+    ============================================ -->
+<script src="__INDEX__/js/summernote/summernote-updated.min.js"></script>
+<script src="__INDEX__/js/summernote/summernote-active.js"></script>
+<!-- dropzone JS
+    ============================================ -->
+<script src="__INDEX__/js/dropzone/dropzone.js"></script>
+<!--  wave JS
+    ============================================ -->
+<script src="__INDEX__/js/wave/waves.min.js"></script>
+<script src="__INDEX__/js/wave/wave-active.js"></script>
+<!--  chosen JS
+    ============================================ -->
+<script src="__INDEX__/js/chosen/chosen.jquery.js"></script>
+<!--  Chat JS
+    ============================================ -->
+<script src="__INDEX__/js/chat/jquery.chat.js"></script>
+<!--  todo JS
+    ============================================ -->
+<script src="__INDEX__/js/todo/jquery.todo.js"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="__INDEX__/js/plugins.js"></script>
+<!-- main JS
+    ============================================ -->
+<script src="__INDEX__/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Start Header Top Area -->
+<div class="header-top-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="logo-area">
+                    <a href="#"><img src="__INDEX__/img/logo/logo.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Header Top Area -->
+<!-- Mobile Menu start -->
+<div class="mobile-menu-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="mobile-menu">
+                    <nav id="dropdown">
+                        <ul class="mobile-menu-nav">
+                            <li><a  href="{:url('index/index')}"> 大数据展示中心</a></li>
+                            <li><a data-toggle="collapse" data-target="#mdatasearch" href="#"> 数据查询</a>
+                                <ul id="mdatasearch" class="collapse dropdown-header-top">
+                                    <li><a href="{:url('data/collect')}">垃圾收集管理</a></li>
+                                    <li><a href="{:url('data/order')}">回收订单管理</a></li>
+                                    <li><a href="{:url('data/score')}">积分红黑榜</a></li>
+                                </ul>
+                            </li>
+                            {if condition="$Think.session.role" != 2}
+                            <li><a  href="{:url('score/index')}"> 积分管理</a></li>
+                            <li><a  href="{:url('shop/index')}"> 积分兑换</a></li>
+                            {/if}
+                            {if condition="$Think.session.role != 1" }
+                            <li><a data-toggle="collapse" data-target="#mtrashcontrol" href="#"> 垃圾资源化管理</a>
+                                <ul id="mtrashcontrol" class="collapse dropdown-header-top">
+                                    {if condition="$Think.session.role == 0"}
+                                        <li><a href="{:url('control/addfac')}">添加第三方公司</a></li>
+                                    {/if}
+                                    <li><a href="{:url('control/buy')}">有机肥订购</a></li>
+                                    <li><a href="{:url('control/detail')}">支出明细</a></li>
+                                </ul>
+                            </li>
+                            {/if}
+                            <li><a data-toggle="collapse" data-target="#muser" href="#">用户界面</a>
+                                <ul id="muser" class="collapse dropdown-header-top">
+                                    <li><a href="{:url('user/index')}">个人中心</a></li>
+                                    <li><a href="{:url('user/logout')}">退出登录</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile Menu end -->
+<!-- Main Menu area start-->
+<div class="main-menu-area mg-tb-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                    <li><a href="{:url('index/index')}"><i class="notika-icon notika-house"></i> 大数据展示中心</a></li>
+                    <li><a data-toggle="tab" href="#datasearch"><i class="notika-icon notika-mail"></i> 数据查询</a></li>
+                    {if condition="$Think.session.role != 2"}
+                    <li><a href="{:url('score/index')}"><i class="notika-icon notika-edit"></i> 积分管理</a></li>
+                    <li><a href="{:url('shop/index')}"><i class="notika-icon notika-bar-chart"></i> 积分兑换</a></li>
+                    {/if}
+                    {if condition="$Think.session.role != 1"}
+                    <li><a data-toggle="tab" href="#trashcontrol"><i class="notika-icon notika-windows"></i> 垃圾资源化管理</a></li>
+                    {/if}
+                    <li><a data-toggle="tab" href="#user"><i class="notika-icon notika-support"></i> 用户页面</a></li>
+                </ul>
+                <div class="tab-content custom-menu-content">
+                    <div id="datasearch" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a href="{:url('data/collect')}">垃圾收集管理</a></li>
+                            <li><a href="{:url('data/order')}">回收订单管理</a></li>
+                            {if condition="$Think.session.role != 2"}
+                            <li><a href="{:url('data/score')}">积分红黑榜</a></li>
+                            {/if}
+                        </ul>
+                    </div>
+                    <div id="trashcontrol" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            {if condition="$Think.session.role == 0"}
+                            <li><a href="{:url('control/addfac')}">添加第三方公司</a></li>
+                            {/if}
+                            <li><a href="{:url('control/buy')}">有机肥订购</a></li>
+                            <li><a href="{:url('control/detail')}">支出明细</a></li>
+                        </ul>
+                    </div>
+                    <div id="user" class="tab-pane notika-tab-menu-bg animated flipInX">
+                        <ul class="notika-main-menu-dropdown">
+                            <li><a href="{:url('user/index')}">个人中心</a></li>
+                            <li><a href="{:url('user/logout')}">退出登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Menu area End-->

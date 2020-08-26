@@ -1,0 +1,391 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>大数据展示中心</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="__INDEX__/img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/bootstrap.min.css">
+    <!-- font awesome CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/owl.carousel.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.theme.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.transitions.css">
+    <!-- meanmenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/normalize.css">
+    <!-- wave CSS
+        ============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/wave/waves.min.css">
+    <link rel="stylesheet" href="__INDEX__/css/wave/button.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- jvectormap CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/jvectormap/jquery-jvectormap-2.0.3.css">
+    <!-- notika icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/notika-custom-icon.css">
+    <!-- wave CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/wave/waves.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/main.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="__INDEX__/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!-- 公共头部 -->
+{include file="public/header"}
+<!-- 公共头部 -->
+
+<!-- Start Status area -->
+<div class="notika-status-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
+                    <div class="website-traffic-ctn">
+                        <h2><span class="counter">{$youdu}</span> Kg </h2>
+                        <p>总回收有毒害垃圾重量</p>
+                    </div>
+                    <div class="sparkline-bar-stats1">9,4,8,6,5,6,4,8,3,5,9,5</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
+                    <div class="website-traffic-ctn">
+                        <h2><span class="counter">{$youji}</span> Kg </h2>
+                        <p>总回收有机垃圾重量</p>
+                    </div>
+                    <div class="sparkline-bar-stats2">1,4,8,3,5,6,4,8,3,3,9,5</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
+                    <div class="website-traffic-ctn">
+                        <h2><span class="counter">{$kehuishou}</span> Kg </h2>
+                        <p>总回收可回收垃圾重量</p>
+                    </div>
+                    <div class="sparkline-bar-stats3">4,2,8,2,5,6,3,8,3,5,9,5</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
+                    <div class="website-traffic-ctn">
+                        <h2>￥<span class="counter">{$input}</span></h2>
+                        <p>用户总农家肥收入</p>
+                    </div>
+                    <div class="sparkline-bar-stats4">2,4,8,4,5,7,4,7,3,5,7,5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Status area-->
+<!-- Start Sale Statistic area-->
+<div class="sale-statistic-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
+                <div class="sale-statistic-inner notika-shadow mg-tb-30">
+                    <div class="curved-inner-pro">
+                        <div class="curved-ctn">
+                            <h2>昨日农家肥售出与生产 (Kg)</h2>
+                            <p>不要的垃圾也能赚钱哦！</p>
+                        </div>
+                    </div>
+                    <div class="bar-chart-wp">
+                        <canvas  id="barchart1"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="statistic-right-area notika-shadow mg-tb-30 sm-res-mg-t-0" style="text-align: center">
+                    <div class="contact-win row">
+                        <div class="col-lg-4"></div>
+                        <div class="contact-img col-lg-4" >
+                            <img src="__INDEX__/img/post/1.jpg" alt="" style="align-content: center"/>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                    <div class="contact-ctn" >
+                        <div class="contact-ad-hd">
+                            <h2>{$user.name}</h2>
+                            <p class="ctn-ads">{$user.role}</p>
+                        </div>
+                        <p>{$user.locate}</p>
+                        <p>积分：{$user.score}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Sale Statistic area-->
+<!-- Start Email Statistic area-->
+<div class="sale-statistic-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="sale-statistic-inner notika-shadow mg-tb-30">
+                    <div class="curved-inner-pro">
+                        <div class="curved-ctn">
+                            <h2>昨日垃圾回收信息 (Kg)</h2>
+                            <p>包括有毒有害垃圾，可回收垃圾，有机垃圾</p>
+                        </div>
+                    </div>
+                    <div class="bar-chart-wp">
+                        <canvas  id="barchart2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Email Statistic area-->
+<!-- Start Realtime sts area-->
+<div class="realtime-statistic-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
+                <div class="realtime-wrap notika-shadow mg-t-30">
+                    <div class="basic-tb-hd">
+                        <h2>当今易腐垃圾信息区域</h2>
+                    </div>
+                    <div class="bsc-tbl-hvr">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>标题</th>
+                                <th>地区</th>
+                                <th>详细地址</th>
+                                <th>重量</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {volist name="yifu" id="item"}
+                            <tr>
+                                <td>{$item.id}</td>
+                                <td>{$item.ttitle}</td>
+                                <td>{$item.loc_id}</td>
+                                <td>{$item.locate}</td>
+                                <td>{$item.weight}</td>
+                            </tr>
+                            {/volist}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="realtime-wrap notika-shadow mg-t-30">
+                    <div class="rc-it-ltd">
+                        <div class="recent-items-ctn">
+                            <div class="recent-items-title">
+                                <h2>积分排行榜</h2>
+                            </div>
+                        </div>
+                        <div class="recent-items-inn">
+                            <table class="table table-inner table-vmiddle">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>姓名</th>
+                                    <th style="width: 60px">积分</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {volist name="red" id="item"}
+                                <tr>
+                                    <td class="f-500 c-cyan">{$item.id}</td>
+                                    <td>{$item.name}</td>
+                                    <td class="f-500 c-cyan">{$item.score}</td>
+                                </tr>
+                                {/volist}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Realtime sts area-->
+
+<!-- 公共尾部 -->
+{include file="public/footer"}
+<!-- 公共尾部 -->
+
+<!-- jquery
+    ============================================ -->
+<script src="__INDEX__/js/vendor/jquery-1.12.4.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="__INDEX__/js/bootstrap.min.js"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="__INDEX__/js/wow.min.js"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery-price-slider.js"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="__INDEX__/js/owl.carousel.min.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery.scrollUp.min.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="__INDEX__/js/meanmenu/jquery.meanmenu.js"></script>
+<!-- counterup JS
+    ============================================ -->
+<script src="__INDEX__/js/counterup/jquery.counterup.min.js"></script>
+<script src="__INDEX__/js/counterup/waypoints.min.js"></script>
+<script src="__INDEX__/js/counterup/counterup-active.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="__INDEX__/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- sparkline JS
+    ============================================ -->
+<script src="__INDEX__/js/sparkline/jquery.sparkline.min.js"></script>
+<script src="__INDEX__/js/sparkline/sparkline-active.js"></script>
+<!-- flot JS
+    ============================================ -->
+<script src="__INDEX__/js/flot/jquery.flot.js"></script>
+<script src="__INDEX__/js/flot/jquery.flot.resize.js"></script>
+<script src="__INDEX__/js/flot/flot-active.js"></script>
+<!-- knob JS
+    ============================================ -->
+<script src="__INDEX__/js/knob/jquery.knob.js"></script>
+<script src="__INDEX__/js/knob/jquery.appear.js"></script>
+<script src="__INDEX__/js/knob/knob-active.js"></script>
+<!--  Chat JS
+    ============================================ -->
+<script src="__INDEX__/js/chat/jquery.chat.js"></script>
+<!-- Charts JS
+    ============================================ -->
+<script src="__INDEX__/js/charts/Chart.js"></script>
+<script>
+    (function ($) {
+        "use strict";
+        /*----------------------------------------*/
+        /*  1.  Bar Chart
+        /*----------------------------------------*/
+
+        var ctx = document.getElementById("barchart1");
+        var barchart1 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["生产", "售出"],
+                datasets: [{
+                    label: 'Bar Chart',
+                    data: [{$yestoutput}, {$yestinput}],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgb(50,205,50, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        /*----------------------------------------*/
+        /*  2.  Bar Chart vertical
+        /*----------------------------------------*/
+        var ctx = document.getElementById("barchart2");
+        var barchart2 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["有毒、害垃圾", "可回收垃圾","有机垃圾"],
+                datasets: [{
+                    label: 'Bar Chart',
+                    data: [{$type1}, {$type2}, {$type3}],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(50,205,50, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+
+
+
+
+    })(jQuery);
+</script>
+<!--  todo JS
+    ============================================ -->
+<script src="__INDEX__/js/todo/jquery.todo.js"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="__INDEX__/js/plugins.js"></script>
+<!--  wave JS
+    ============================================ -->
+<script src="__INDEX__/js/wave/waves.min.js"></script>
+<script src="__INDEX__/js/wave/wave-active.js"></script>
+<!-- main JS
+    ============================================ -->
+<script src="__INDEX__/js/main.js"></script>
+</body>
+
+</html>

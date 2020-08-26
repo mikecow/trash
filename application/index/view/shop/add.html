@@ -1,0 +1,279 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>添加商品</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="__INDEX__/img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/bootstrap.min.css">
+    <!-- font awesome CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/owl.carousel.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.theme.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.transitions.css">
+    <!-- meanmenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/animate.css">
+    <!-- summernote CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/summernote/summernote.css">
+    <!-- Range Slider CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/themesaller-forms.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/normalize.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Notika icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/notika-custom-icon.css">
+    <!-- bootstrap select CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/bootstrap-select/bootstrap-select.css">
+    <!-- datapicker CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/datapicker/datepicker3.css">
+    <!-- Color Picker CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/color-picker/farbtastic.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/chosen/chosen.css">
+    <!-- notification CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/notification/notification.css">
+    <!-- dropzone CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/dropzone/dropzone.css">
+    <!-- wave CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/wave/waves.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/main.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="__INDEX__/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!-- 公共头部 -->
+{include file="public/header"}
+<!-- 公共头部 -->
+
+
+
+<!--提交垃圾处理信息 1-->
+<!-- Form Examples area start-->
+<div class="form-example-area">
+    <div class="container">
+        <div class="row">
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-example-wrap mg-t-30">
+                        <div class="cmp-tb-hd cmp-int-hd">
+                            <h2>添加商品</h2>
+                        </div>
+                        <br>
+
+                        <div class="form-example-int form-horizental">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                        <label class="hrzn-fm">名称</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-7 col-sm-7 col-xs-12">
+                                        <div class="nk-int-st">
+                                            <input type="text" class="form-control input-sm" name="name" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-example-int form-horizental mg-t-15">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                        <label class="hrzn-fm">价格(分)</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-7 col-sm-7 col-xs-12">
+                                        <div class="nk-int-st">
+                                            <input type="text" class="form-control input-sm" name="price" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-example-int form-horizental mg-t-15">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                        <label class="hrzn-fm">图片</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-7 col-sm-7 col-xs-12" >
+                                        <div class="nk-int-st">
+                                            <input type="file" name="thumb" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-example-int form-horizental mg-t-15">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                                        <label class="hrzn-fm">介绍</label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-7 col-sm-7 col-xs-12">
+                                        <div class="nk-int-st">
+                                            <textarea name="content" class="form-control" rows="3"  required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-example-int mg-t-15">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                </div>
+                                <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
+                                    <button class="btn btn-lg btn-success notika-btn-success"> 提&nbsp;交 </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Form Examples area End-->
+
+
+<!-- 公共头部 -->
+{include file="public/footer"}
+<!-- 公共头部 -->
+<!-- jquery
+    ============================================ -->
+<script src="__INDEX__/js/vendor/jquery-1.12.4.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="__INDEX__/js/bootstrap.min.js"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="__INDEX__/js/wow.min.js"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery-price-slider.js"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="__INDEX__/js/owl.carousel.min.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery.scrollUp.min.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="__INDEX__/js/meanmenu/jquery.meanmenu.js"></script>
+<!-- counterup JS
+    ============================================ -->
+<script src="__INDEX__/js/counterup/jquery.counterup.min.js"></script>
+<script src="__INDEX__/js/counterup/waypoints.min.js"></script>
+<script src="__INDEX__/js/counterup/counterup-active.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="__INDEX__/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- sparkline JS
+    ============================================ -->
+<script src="__INDEX__/js/sparkline/jquery.sparkline.min.js"></script>
+<script src="__INDEX__/js/sparkline/sparkline-active.js"></script>
+<!-- flot JS
+    ============================================ -->
+<script src="__INDEX__/js/flot/jquery.flot.js"></script>
+<script src="__INDEX__/js/flot/jquery.flot.resize.js"></script>
+<script src="__INDEX__/js/flot/flot-active.js"></script>
+<!-- knob JS
+    ============================================ -->
+<script src="__INDEX__/js/knob/jquery.knob.js"></script>
+<script src="__INDEX__/js/knob/jquery.appear.js"></script>
+<script src="__INDEX__/js/knob/knob-active.js"></script>
+<!-- Input Mask JS
+    ============================================ -->
+<script src="__INDEX__/js/jasny-bootstrap.min.js"></script>
+<!-- icheck JS
+    ============================================ -->
+<script src="__INDEX__/js/icheck/icheck.min.js"></script>
+<script src="__INDEX__/js/icheck/icheck-active.js"></script>
+<!-- rangle-slider JS
+    ============================================ -->
+<script src="__INDEX__/js/rangle-slider/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="__INDEX__/js/rangle-slider/jquery-ui-touch-punch.min.js"></script>
+<script src="__INDEX__/js/rangle-slider/rangle-active.js"></script>
+<!-- datapicker JS
+    ============================================ -->
+<script src="__INDEX__/js/datapicker/bootstrap-datepicker.js"></script>
+<script src="__INDEX__/js/datapicker/datepicker-active.js"></script>
+<!-- bootstrap select JS
+    ============================================ -->
+<script src="__INDEX__/js/bootstrap-select/bootstrap-select.js"></script>
+<!--  color-picker JS
+    ============================================ -->
+<script src="__INDEX__/js/color-picker/farbtastic.min.js"></script>
+<script src="__INDEX__/js/color-picker/color-picker.js"></script>
+<!--  notification JS
+    ============================================ -->
+<script src="__INDEX__/js/notification/bootstrap-growl.min.js"></script>
+<script src="__INDEX__/js/notification/notification-active.js"></script>
+<!--  summernote JS
+    ============================================ -->
+<script src="__INDEX__/js/summernote/summernote-updated.min.js"></script>
+<script src="__INDEX__/js/summernote/summernote-active.js"></script>
+<!-- dropzone JS
+    ============================================ -->
+<script src="__INDEX__/js/dropzone/dropzone.js"></script>
+<!--  wave JS
+    ============================================ -->
+<script src="__INDEX__/js/wave/waves.min.js"></script>
+<script src="__INDEX__/js/wave/wave-active.js"></script>
+<!--  chosen JS
+    ============================================ -->
+<script src="__INDEX__/js/chosen/chosen.jquery.js"></script>
+<!--  Chat JS
+    ============================================ -->
+<script src="__INDEX__/js/chat/jquery.chat.js"></script>
+<!--  todo JS
+    ============================================ -->
+<script src="__INDEX__/js/todo/jquery.todo.js"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="__INDEX__/js/plugins.js"></script>
+<!-- main JS
+    ============================================ -->
+<script src="__INDEX__/js/main.js"></script>
+</body>
+
+</html>

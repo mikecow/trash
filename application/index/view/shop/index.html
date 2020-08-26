@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>积分商店</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="__INDEX__/img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/bootstrap.min.css">
+    <!-- font awesome CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/owl.carousel.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.theme.css">
+    <link rel="stylesheet" href="__INDEX__/css/owl.transitions.css">
+    <!-- meanmenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/normalize.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- Notika icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/notika-custom-icon.css">
+    <!-- wave CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/wave/waves.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/main.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="__INDEX__/css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="__INDEX__/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+<!-- 公共头部 -->
+{include file="public/header"}
+<!-- 公共头部 -->
+
+<!-- Breadcomb area Start-->
+<div class="breadcomb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcomb-list">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="breadcomb-wp">
+                                <div class="breadcomb-icon">
+                                    <i class="notika-icon notika-support"></i>
+                                </div>
+                                <div class="breadcomb-ctn">
+                                    <h2>积分商店</h2>
+                                    <p>在这里，你可以用你的积分来换取商品</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="breadcomb-ctn">
+                                <h2>当前积分：</h2>
+                                <p>{$user.score}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div class="breadcomb-ctn">
+                                <h2></h2>
+                                <a href="{:url('add')}">
+                                    <button class="btn btn-success notika-btn-success waves-effect"> 新 增 </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcomb area End-->
+<!-- Contact area Start-->
+<div class="contact-area">
+    <div class="container">
+        <div class="row">
+            {volist name="shops" id="shop"}
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="contact-list mg-t-30" style="text-align: center">
+                    <div class="contact-win">
+                        <div class="contact-img">
+                            <img src="/trash{$shop.thumb}" alt="商品缩略图" />
+                        </div>
+                    </div>
+                    <div class="contact-ctn">
+                        <div class="contact-ad-hd">
+                            <h2>{$shop.name}</h2>
+                            <p class="ctn-ads">{$shop.content}</p>
+                        </div>
+                    </div>
+                    <div class="social-st-list row">
+                        <div class="col-xs-3"></div>
+                        <div class="social-sn col-xs-6">
+                            <h2>价格</h2>
+                            <p>{$shop.price} 积分</p>
+                        </div>
+                        <div class="col-xs-3"></div>
+                    </div>
+                    <br>
+                    <div class="social-st-list row">
+                        <div class="col-xs-4"></div>
+                        {if condition="$Think.session.role == 1"}
+                        <div class="col-xs-4 social-sn">
+                            <a href="{:url('buy', array('id'=>$shop.id))}">
+                                <button class="btn btn-success notika-btn-success waves-effect"> 购 买 </button>
+                            </a>
+                        </div>
+                        {/if}
+                        {if condition="$Think.session.role == 0"}
+                        <div class="col-xs-4 social-sn">
+                            <a href="{:url('del', array('id'=>$shop.id))}">
+                               <button class="btn btn-danger notika-btn-success waves-effect"> 删 除 </button>
+                            </a>
+                        </div>
+                        {/if}
+                        <div class="col-xs-4"></div>
+                    </div>
+                </div>
+            </div>
+            {/volist}
+        </div>
+    </div>
+</div>
+<!-- Contact area End-->
+
+<!-- 公共头部 -->
+{include file="public/footer"}
+<!-- 公共头部 -->
+<!-- jquery
+    ============================================ -->
+<script src="__INDEX__/js/vendor/jquery-1.12.4.min.js"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="__INDEX__/js/bootstrap.min.js"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="__INDEX__/js/wow.min.js"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery-price-slider.js"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="__INDEX__/js/owl.carousel.min.js"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="__INDEX__/js/jquery.scrollUp.min.js"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="__INDEX__/js/meanmenu/jquery.meanmenu.js"></script>
+<!-- counterup JS
+    ============================================ -->
+<script src="__INDEX__/js/counterup/jquery.counterup.min.js"></script>
+<script src="__INDEX__/js/counterup/waypoints.min.js"></script>
+<script src="__INDEX__/js/counterup/counterup-active.js"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="__INDEX__/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- sparkline JS
+    ============================================ -->
+<script src="__INDEX__/js/sparkline/jquery.sparkline.min.js"></script>
+<script src="__INDEX__/js/sparkline/sparkline-active.js"></script>
+<!-- flot JS
+    ============================================ -->
+<script src="__INDEX__/js/flot/jquery.flot.js"></script>
+<script src="__INDEX__/js/flot/jquery.flot.resize.js"></script>
+<script src="__INDEX__/js/flot/flot-active.js"></script>
+<!-- knob JS
+    ============================================ -->
+<script src="__INDEX__/js/knob/jquery.knob.js"></script>
+<script src="__INDEX__/js/knob/jquery.appear.js"></script>
+<script src="__INDEX__/js/knob/knob-active.js"></script>
+<!--  wave JS
+    ============================================ -->
+<script src="__INDEX__/js/wave/waves.min.js"></script>
+<script src="__INDEX__/js/wave/wave-active.js"></script>
+<!--  Chat JS
+    ============================================ -->
+<script src="__INDEX__/js/chat/jquery.chat.js"></script>
+<!--  todo JS
+    ============================================ -->
+<script src="__INDEX__/js/todo/jquery.todo.js"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="__INDEX__/js/plugins.js"></script>
+<!-- main JS
+    ============================================ -->
+<script src="__INDEX__/js/main.js"></script>
+</body>
+
+</html>
